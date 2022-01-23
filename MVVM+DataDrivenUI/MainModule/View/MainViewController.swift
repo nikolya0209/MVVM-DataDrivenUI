@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     private var testView = TestView()
 
     override func viewDidLoad() {
-        //viewModel = MainViewModel()
+        
         super.viewDidLoad()
         createView()
         updateView()
