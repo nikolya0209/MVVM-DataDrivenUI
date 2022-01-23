@@ -27,14 +27,14 @@ final class MainViewModel: MainViewModelProtocol {
                                                numberPhone: nil)))
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.updateViewData?(.success(ViewData.Data(icon: "Succes",
+            self?.updateViewData?(.success(ViewData.Data(icon: "succes",
                                                          title: "Succes",
                                                          description: "Good",
                                                          numberPhone: nil)))
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) { [weak self] in
-            self?.updateViewData?(.failure(ViewData.Data(icon: "Error",
+            self?.updateViewData?(.failure(ViewData.Data(icon: "failure",
                                                          title: "Error",
                                                          description: "Not user",
                                                          numberPhone: nil)))
