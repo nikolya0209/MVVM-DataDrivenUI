@@ -25,12 +25,20 @@ class TestView: UIView {
         switch viewData {
         case .initial:
             update(viewData: nil, isHidden: true)
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
         case .loading(let loading):
-            break
+            update(viewData: loading, isHidden: false)
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
         case .success(let success):
-            break
+            update(viewData: success, isHidden: false)
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
         case .failure(let failure):
-            break
+            update(viewData: failure, isHidden: false)
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
         }
     }
     
@@ -42,5 +50,4 @@ class TestView: UIView {
         descriptionLabel.isHidden = isHidden
         imageView.isHidden = isHidden
     }
-    
 }
