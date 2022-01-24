@@ -22,15 +22,15 @@ final class MainViewModel: MainViewModelProtocol {
     
     public func error() {
         updateViewData?(.failure(ViewData.Data(icon: "failure",
-                                                     title: "Error",
-                                                     description: "Not user",
-                                                     numberPhone: nil)))
+                                               title: "Error",
+                                               description: "Not user",
+                                               numberPhone: nil)))
     }
     
     public func startFetch() {
         updateViewData?(.success(ViewData.Data(icon: "success",
-                                                     title: "Succes",
-                                                     description: "Good",
-                                                     numberPhone: nil)))
+                                               title: "Succes",
+                                               description: "Good",
+                                               numberPhone: nil)))
     }
 }

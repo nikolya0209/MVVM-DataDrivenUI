@@ -19,7 +19,7 @@ class TestView: UIView {
     lazy var activityIndicator = makeActivityIndicator()
     lazy var titleLabel = makeTitleLabel()
     lazy var descriptionLabel = makeDescriptionLabel()
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         switch viewData {

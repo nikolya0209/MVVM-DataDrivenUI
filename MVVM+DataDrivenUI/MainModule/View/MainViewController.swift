@@ -11,15 +11,13 @@ class MainViewController: UIViewController {
     
     private var viewModel = MainViewModel()
     private var testView = TestView()
-
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         createView()
         updateView()
-        
     }
-
+    
     @IBAction func startAction(_ sender: Any) {
         viewModel.startFetch()
     }
@@ -37,6 +35,5 @@ class MainViewController: UIViewController {
             self?.testView.viewData = viewData
         }
     }
-
 }
 
